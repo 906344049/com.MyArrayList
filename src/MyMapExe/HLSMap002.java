@@ -1,7 +1,6 @@
 package MyMapExe;
 
 import MyListEx.MList;
-import com.sun.istack.internal.localization.NullLocalizable;
 //若是自己手写的链表有一个方法可以通过Object来get也可以用自己的包
 
 import java.util.LinkedList;

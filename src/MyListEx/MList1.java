@@ -3,11 +3,11 @@ package MyListEx;
 /**
  * @Note 双向链表
  */
-public class MList{
+public class MList1{
     private Node first;
     private Node last;
     private int size = 0;
-//添加节点
+    //添加节点
     public void add(Object obj){
         Node n = new Node();
 
@@ -103,7 +103,7 @@ public class MList{
         return size;
     }
     public static void main(String[] args) {
-        MList list = new MList();
+        MList1 list = new MList1();
         list.add("aaa");
         list.add("bbb");
         list.add("ccc");

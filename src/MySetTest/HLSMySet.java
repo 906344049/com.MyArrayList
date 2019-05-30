@@ -1,8 +1,9 @@
 package MySetTest;
 
+import java.util.Collection;
 import java.util.HashMap;
 
-public class HLSMySet {
+public class HLSMySet{
     HashMap map;
     private static final Object PRESENT = new Object();
 

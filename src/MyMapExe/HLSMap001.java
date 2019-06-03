@@ -1,5 +1,8 @@
 package MyMapExe;
 
+import java.util.Map;
+import java.util.concurrent.ConcurrentHashMap;
+
 /**
  *   自定义实现Map功能！
  *   简单版   暂不完美
@@ -14,6 +17,7 @@ package MyMapExe;
  */
 public class HLSMap001 {
 
+    Map test = new ConcurrentHashMap();
     HLSEntry[] array = new HLSEntry[100];
     //不考虑数组扩容，以后可以加上
     int size;

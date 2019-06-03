@@ -41,7 +41,13 @@ public class HLSMap002 {
             改进为   位运算  按位与&      hash值 = hashCode & (数组.length -1);
             但是  数组的长度一定要是 2 的整数幂  2  4  8  16  32  64  128.......
             后来又做了一些调整    一般是位运算为主
-            JDK8，当链表长度>8，链表就转化为   红黑树
+            JDK8，当链表长度>8，链表就转化为
+
+            8  6
+
+            红黑树 (大概了解插入机制，以及选择原因)
+
+
          */
         int i = Math.abs(key.hashCode()%array.length);
         if (array[i]==null){

@@ -87,9 +87,11 @@ public class HLSMap002 {
         m.put("hls","huangleshu");
         m.put("huang213456",new wife("123456"));
         m.put("hls","123456789");
+        m.put("huangleshu",new Date());
         System.out.println("m的大小是"+m.size);
         System.out.println(m.get("hls"));
         System.out.println(((wife)m.get("huang213456")).name);
+        System.out.println(m.get("huangleshu").toString());
 
     }
 }

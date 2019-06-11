@@ -2,9 +2,7 @@ package MyMapExe;
 
 //若是自己手写的链表有一个方法可以通过Object来get也可以用自己的包
 
-import java.util.ArrayList;
-import java.util.LinkedList;
-import java.util.Objects;
+import java.util.*;
 
 /**
  * 001存在问题：
@@ -39,7 +37,7 @@ public class HLSMap002 {
             其实是需要用  散列  算法来将数据均匀分布，这样遍历的效率就最高
             这里的hashcode，后来JDK改进过取余数的问题
             改进为   位运算  按位与&      hash值 = hashCode & (数组.length -1);
-            但是  数组的长度一定要是 2 的整数幂  2  4  8  16  32  64  128.......
+            但是  数组的长度一定要是 2 的整数幂  2  4  8  16  32  64  128....... 方便扩容时候进行处理
             后来又做了一些调整    一般是位运算为主
             JDK8，当链表长度>8，链表就转化为
 
@@ -54,6 +52,7 @@ public class HLSMap002 {
             LinkedList m = new LinkedList();
             array[i] = m;
             m.add(hlsEntry);
+            size++;
         }else {
             for (int j=0;j<array.length;j++){
                 if (((HLSEntry) array[i].get(j)).key.equals(key)){
@@ -62,6 +61,7 @@ public class HLSMap002 {
                 }
             }
             array[i].add(hlsEntry);
+            size++;
         }
     }
 
@@ -87,8 +87,10 @@ public class HLSMap002 {
         m.put("hls","huangleshu");
         m.put("huang213456",new wife("123456"));
         m.put("hls","123456789");
+        System.out.println("m的大小是"+m.size);
         System.out.println(m.get("hls"));
         System.out.println(((wife)m.get("huang213456")).name);
+
     }
 }
 class student extends Object{
